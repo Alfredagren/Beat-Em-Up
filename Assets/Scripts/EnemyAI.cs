@@ -7,11 +7,13 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        // References the player position
         player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
     {
+        // Moves towards the player
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
 }

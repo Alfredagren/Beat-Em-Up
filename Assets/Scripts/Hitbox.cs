@@ -6,6 +6,7 @@ public class Hitbox : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            // Destroys the enemy parent
             GameObject enemyRoot = other.transform.root.gameObject;
             Destroy(enemyRoot);
         }

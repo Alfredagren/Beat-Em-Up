@@ -6,11 +6,10 @@ public class PlayerMove2D : MonoBehaviour
     public float moveSpeed = 3f;
     public Rigidbody2D rbody;
     public bool flip = false;
-    public SpriteRenderer spriteRenderer;
 
     private void Update()
     {
-        // Calculate direction using player input (WASD) on the 2D plane (X and Y)
+        // Calculate direction using player input (WASD)
         Vector2 direction = Vector2.zero;
 
         if (Keyboard.current.wKey.isPressed)
@@ -30,13 +29,13 @@ public class PlayerMove2D : MonoBehaviour
             direction += new Vector2(1, 0);
         }
 
-        // Make sure diagonal movement isn't faster
+        // Makes sure diagonal movement isn't faster
         direction = direction.normalized;
 
         // Move the Rigidbody2D
         Move(direction, moveSpeed);
 
-        // Flips the player when moving the opposite direction
+        // Flips the player when moving the opposite direction (Is currently buggy when pressing A and D at the same time, will fix later)
         if (Keyboard.current.aKey.wasPressedThisFrame)
         {
             if (flip == false)
@@ -58,11 +57,8 @@ public class PlayerMove2D : MonoBehaviour
 
     private void Move(Vector2 direction, float speed)
     {
-        // Apply velocity to X and Y axes
+        // Adds speed to the calculated direction
         Vector2 velocity = direction * speed;
-
-        // Note: Use 'rbody.velocity' if you are on Unity 2022 or older. 
-        // Unity 6 and newer uses 'linearVelocity'.
         rbody.linearVelocity = velocity;
     }
 }

@@ -6,7 +6,6 @@ Close combat: Timing attacks and abilities to hit enemies without being hit
 Strategic movement: The player needs to constantly move to not be overwhelmed and get a positional advantage
 Adapting gameplay: Every run should feel like the player improves and finds new strategies
 
-
 The core loop:
 Fight wave of enemies by dodging, hitting and maybe using abilities like throwing weapons or area of effect special attacks if I have time to create them
 
@@ -15,7 +14,6 @@ Get a victory screen after surviving a few waves of enemies with increasing diff
 
 The risks:
 The movement and attacks may feel barebones due to lack of programming skills, but definitely doable. It will take a few tries to experiment with hurtboxes and hitboxes since all attacks will have wind-up, action and recovery using Unitys animator and 2D colliders
-
 
 Weakest part:
 Lack of knowledge when it comes to creating the gameplay mechanics
