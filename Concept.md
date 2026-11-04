@@ -1,19 +1,20 @@
 Player fantasy:
-The player is a slow but powerful close combat brawler that takes on waves with multiple enemies at once
+The player is a solo vigilante in a corrupt city that turns a blind eye towards crime. The main character mows down waves of criminals in close range combat
+The player will feel unstoppable, a power fantasy of a lone hero working as a one man army to save the city
 
 The pillars:
-Close combat: Timing attacks and abilities to hit enemies without being hit
-Strategic movement: The player needs to constantly move to not be overwhelmed and get a positional advantage
-Adapting gameplay: Every run should feel like the player improves and finds new strategies
+Close combat mechanics: Timing attacks and abilities to hit enemies without being hit is key. The player is a fighter and needs to dodge and strike like a real fighter
+Strategic movement: The player needs to constantly move to not be overwhelmed. They are one against many, so all advantageous position is required to survive
+Adapting gameplay: Every run should feel like the player improves and finds new strategies after every playthrough. The criminals rampaging the city are colossal in numbers and will not go down easy
 
 The core loop:
-Fight wave of enemies by dodging, hitting and maybe using abilities like throwing weapons or area of effect special attacks if I have time to create them
+Fight wave of enemies by dodging, attacking and using an area of effect ground smash ability with a long cooldown.
 
 The ending:
-Get a victory screen after surviving a few waves of enemies with increasing difficulty
+Get a victory screen after surviving a few waves of enemies with increasing difficulty. The player can also lose if they get hit 3 times, they regain 1 health every successful wave
 
 The risks:
-The movement and attacks may feel barebones due to lack of programming skills, but definitely doable. It will take a few tries to experiment with hurtboxes and hitboxes since all attacks will have wind-up, action and recovery using Unitys animator and 2D colliders
+Ambitious goals for enemies
 
 Weakest part:
 Lack of knowledge when it comes to creating the gameplay mechanics

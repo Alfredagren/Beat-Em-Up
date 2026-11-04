@@ -6,9 +6,39 @@ public class PlayerMove2D : MonoBehaviour
     public float moveSpeed = 3f;
     public Rigidbody2D rbody;
     public bool flip = false;
+    private bool canMove = true;
+    private float freezeTimer = 0f;
+    private bool isFrozen = false;
 
-    private void Update()
+    void Update()
     {
+        // Stops movement when attacking
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && canMove && !isFrozen)
+        {
+            Debug.Log("STOP");
+            rbody.linearVelocity = Vector2.zero;
+            canMove = false;
+            freezeTimer = 0.35f;
+            isFrozen = true;
+        }
+
+        // Counts down the timer until the player can move again
+        if (isFrozen)
+        {
+            freezeTimer -= Time.deltaTime;
+            rbody.linearVelocity = Vector2.zero;
+
+            if (freezeTimer <= 0f)
+            {
+                canMove = true;
+                isFrozen = false;
+                Debug.Log("Recovered");
+            }
+
+            // Goes back to ensure movement is locked until the timer is over
+            return;
+        }
+
         // Calculate direction using player input (WASD)
         Vector2 direction = Vector2.zero;
 
@@ -32,11 +62,11 @@ public class PlayerMove2D : MonoBehaviour
         // Makes sure diagonal movement isn't faster
         direction = direction.normalized;
 
-        // Move the Rigidbody2D
+        // Moves the Rigidbody2D
         Move(direction, moveSpeed);
 
         // Flips the player when moving the opposite direction (Is currently buggy when pressing A and D at the same time, will fix later)
-        if (Keyboard.current.aKey.wasPressedThisFrame)
+        if (Keyboard.current.aKey.isPressed)
         {
             if (flip == false)
             {
@@ -45,7 +75,7 @@ public class PlayerMove2D : MonoBehaviour
             }
         }
 
-        if (Keyboard.current.dKey.wasPressedThisFrame)
+        if (Keyboard.current.dKey.isPressed)
         {
             if (flip == true)
             {
