@@ -1,16 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hitbox : MonoBehaviour
 {
-    public void QuitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -21,9 +13,9 @@ public class Hitbox : MonoBehaviour
         }
         else if (other.CompareTag("Player"))
         {
-            // Testing to see if the enemies can hit you
+            // Restarts the scene on player getting hit
             Debug.Log("YOU ARE DEAD!");
-            QuitGame();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
