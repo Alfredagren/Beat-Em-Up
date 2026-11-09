@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         // Moves the rigidbody towards the player
         Vector2 newPos = Vector2.MoveTowards(rbody.position, player.position, moveSpeed * Time.fixedDeltaTime);

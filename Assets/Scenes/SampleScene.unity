@@ -9390,9 +9390,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDamping: 0
-  m_AngularDamping: 20
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 9c9e4643f200c87429c0afa2ebca7bc3, type: 2}
   m_IncludeLayers:
@@ -9574,19 +9574,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336062344470494969, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3336062344470494969, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249759599331314872, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5500751097649281975, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.47
+      value: 14.31
       objectReference: {fileID: 0}
     - target: {fileID: 5500751097649281975, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.65
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 5500751097649281975, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9626,7 +9630,19 @@ PrefabInstance:
       objectReference: {fileID: 1484864871}
     - target: {fileID: 8161337103332089082, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
       propertyPath: moveSpeed
-      value: 1.8
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161337103332089082, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
+      propertyPath: attackRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161337103332089082, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
+      propertyPath: attackTimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161337103332089082, guid: 1d8d9968216c3c24ea84c62ec0315bfd, type: 3}
+      propertyPath: freezeTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9719,7 +9735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac4c2176a92e1b40bca7baa6d8157c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  moveSpeed: 1
+  moveSpeed: 1.1
   flip: 0
   rbody: {fileID: 5249759599169733194}
 --- !u!212 &8203025409851266040
