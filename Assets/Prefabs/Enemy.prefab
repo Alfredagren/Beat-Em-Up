@@ -400,7 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725272354932675256}
   - component: {fileID: 8149267314203490442}
-  - component: {fileID: 1013834543938292685}
+  - component: {fileID: 4008866704437401287}
   m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
@@ -469,7 +469,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.28, y: 1.99}
   m_EdgeRadius: 0
---- !u!114 &1013834543938292685
+--- !u!114 &4008866704437401287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -478,9 +478,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6645540692550982153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a38be99a20a026428933827a7ff91d6, type: 3}
+  m_Script: {fileID: 11500000, guid: dae010aabf0ab344dbda0c42707fcb9d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hitbox
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHitbox
 --- !u!1 &7019559937771185632
 GameObject:
   m_ObjectHideFlags: 0

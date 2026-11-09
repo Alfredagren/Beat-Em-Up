@@ -3,19 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class Hitbox : MonoBehaviour
 {
+    private Menus menuScript;
+    private void Start()
+    {
+        // Reference the Menus script
+        menuScript = FindFirstObjectByType<Menus>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
-            // Destroys the enemy parent (Need to fix enemies being able to destroy each other)
+            // Destroys the enemy parent
             GameObject enemyRoot = other.transform.root.gameObject;
             Destroy(enemyRoot);
         }
-        else if (other.CompareTag("Player"))
+        else if (other.CompareTag("Final Boss"))
         {
-            // Restarts the scene on player getting hit
-            Debug.Log("YOU ARE DEAD!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("You beat the boss");
+            menuScript.WinGame();
         }
+
     }
 }

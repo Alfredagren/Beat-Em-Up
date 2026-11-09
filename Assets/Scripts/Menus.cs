@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject pausePanel;
     public GameObject winPanel;
+    public GameObject losePanel;
     bool paused = false;
-    public Camera mainCamera;
 
     void Start()
     {
@@ -28,7 +29,15 @@ public class Menus : MonoBehaviour
         }
         else if (winPanel.activeSelf && Keyboard.current.enterKey.wasPressedThisFrame)
         {
-            StartGame();
+            RestartGame();
+        }
+        else if (losePanel.activeSelf && Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            RestartGame();
+        }
+        else if (losePanel.activeSelf && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            QuitGame();
         }
         else if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
@@ -49,7 +58,6 @@ public class Menus : MonoBehaviour
         Debug.Log("Started game");
         startPanel.SetActive(false);
         SetMenuOpen(false);
-
     }
 
     public void WinGame()
@@ -57,6 +65,19 @@ public class Menus : MonoBehaviour
         Debug.Log("You win");
         winPanel.SetActive(true);
         SetMenuOpen(true);
+    }
+
+    public void LoseGame()
+    {
+        Debug.Log("You lose");
+        losePanel.SetActive(true);
+        SetMenuOpen(true);
+    }
+
+    public void RestartGame()
+    {
+        Debug.Log("Restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Toggles the menu on/off
