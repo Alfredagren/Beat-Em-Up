@@ -7,12 +7,13 @@ public class BatSwing : MonoBehaviour
 
     void Start()
     {
+        // Gives the object access to the animator
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // Swings the bat upon pressing spacebar
+        // Activates the Bat_WindUp and Bat_Swing activation upon pressing spacebar
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Debug.Log("Lucille Give Me Strength!");

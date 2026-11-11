@@ -19,6 +19,7 @@ public class Hitbox : MonoBehaviour
         }
         else if (other.CompareTag("Final Boss"))
         {
+            // Starts the win screen when "Final Boss" is defeated
             Debug.Log("You beat the boss");
             menuScript.WinGame();
         }

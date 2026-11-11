@@ -18,7 +18,7 @@ public class Menus : MonoBehaviour
     }
     void Update()
     {
-        // Quits the game only if the escape button is pressed in the start menu 
+        // Only lets the player use the current buttons on the respectve panel
         if (startPanel.activeSelf && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             QuitGame();
@@ -46,15 +46,16 @@ public class Menus : MonoBehaviour
             SetMenuOpen(paused);
         }
 
-        // Start game with Enter (if the start panel is active)
+        // Start game with Enter if the start panel is active
         if (startPanel.activeSelf && Keyboard.current.enterKey.wasPressedThisFrame)
         {
             StartGame();
         }
     }
-    // The Play button will call this.
+
     public void StartGame()
     {
+        // Shuts off start screen when starting
         Debug.Log("Started game");
         startPanel.SetActive(false);
         SetMenuOpen(false);
@@ -62,6 +63,7 @@ public class Menus : MonoBehaviour
 
     public void WinGame()
     {
+        // Opens win screen
         Debug.Log("You win");
         winPanel.SetActive(true);
         SetMenuOpen(true);
@@ -69,6 +71,7 @@ public class Menus : MonoBehaviour
 
     public void LoseGame()
     {
+        // Opens lose screen
         Debug.Log("You lose");
         losePanel.SetActive(true);
         SetMenuOpen(true);
@@ -76,6 +79,7 @@ public class Menus : MonoBehaviour
 
     public void RestartGame()
     {
+        // Reloads the scene on restart
         Debug.Log("Restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -92,9 +96,11 @@ public class Menus : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-    // Called by the button in the Pause menu
+  
+
     public void Resume()
     {
+        // Unpauses the timer and resumes
         paused = false;
         pausePanel.SetActive(false);
         SetMenuOpen(false);

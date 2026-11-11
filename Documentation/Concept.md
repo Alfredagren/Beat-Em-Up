@@ -8,13 +8,13 @@ Strategic movement: The player needs to constantly move to not be overwhelmed. T
 Adapting gameplay: Every run should feel like the player improves and finds new strategies after every playthrough. The criminals rampaging the city are colossal in numbers and will not go down easy
 
 The core loop:
-Fight wave of enemies by dodging, attacking and using an area of effect ground smash ability with a long cooldown.
+Fight wave of enemies by dodging, attacking and using an area of effect ground smash ability with a long cooldown
 
 The ending:
 Get a victory screen after surviving a few waves of enemies with increasing difficulty. The player can also lose if they get hit 3 times, they regain 1 health every successful wave
 
 The risks:
-Ambitious goals for enemies
+Ambitious goals for enemy AI. Wanting to create a big variety attacks and abilities may be too much work for so little time
 
 Weakest part:
 Lack of knowledge when it comes to creating the gameplay mechanics

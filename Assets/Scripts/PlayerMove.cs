@@ -18,11 +18,11 @@ public class PlayerMove2D : MonoBehaviour
             Debug.Log("STOP");
             rbody.linearVelocity = Vector2.zero;
             canMove = false;
-            freezeTimer = 0.35f;
+            freezeTimer = 0.25f;
             isFrozen = true;
         }
 
-        // Counts down the timer until the player can move again
+        // Counts down the timer until the player can move again. Returns if the timer is still going
         if (isFrozen)
         {
             freezeTimer -= Time.deltaTime;
@@ -34,8 +34,6 @@ public class PlayerMove2D : MonoBehaviour
                 isFrozen = false;
                 Debug.Log("Recovered");
             }
-
-            // Goes back to ensure movement is locked until the timer is over
             return;
         }
 
