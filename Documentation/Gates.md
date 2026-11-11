@@ -84,8 +84,8 @@ What they said, in one line:
 
 - [x] Safety build: link sent to Brian on Teams, Thursday morning
 - [x] Playtest record (`PlaytestRecord.md`): at least 3 testers
-- [ ] Post mortem (`PostMortem.md`), handed in at the playtest
-- [ ] Final build (optional improvements): link sent by Sunday
+- [x] Post mortem (`PostMortem.md`), handed in at the playtest
+- [x] Final build (optional improvements): link sent by Sunday
 - [ ] Going for VG? `VGClaim.md` committed, and a Teams message to Brian, by Sunday
 
 ---
@@ -98,7 +98,7 @@ Write a line every time you work on the project. Your post mortem compares these
 |---|---|---|
 | Nov 2 | 3 | Testing concept, testing animator |
 | Nov 3 | 2 | Creating more scripts for player and enemies |
-| Nov 4 | 4 | I Made the player stop moving when attacking and added hitboxes on the weapons though animator events |
+| Nov 4 | 5 | I Made the player stop moving when attacking and added hitboxes on the weapons though animator events |
 | Nov 5 | 2 | I tried adding features such as health, enemy waves and an area of effect ability for the player, but cut them because they would take too long to make |
 | Nov 6 | 2 | Created menues
 | Nov 9 | 3 | Made a win condition and made all menues and buttons functional. Also made HUD that counters the amount of enemies left

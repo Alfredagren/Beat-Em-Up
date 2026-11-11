@@ -35,10 +35,11 @@ Pick 3 features from your Master Feature List.
 
 | Feature | Hours guessed | Hours spent | Why the difference? |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+| Activating hitboxes with animator events | 1 | 3 | I underestimated how tricky it was gonna be to make animation events. I got very lost in the inspector |
+| Stopping movement when attacking | 1 | 2 | Trying different methods to see which is the least buggy took a few tries |
+| Making the menues work | 1 | 3 | I kept getting the pause screen when I wass in the menu, or clicking restart would not work until I just decided on restarting the scene |
 
 **What does this teach you about scope?** One or two sentences.
 
->
+> This taught me that it is important to have a wide scope, but it is even more important to learn to cut the features that are not needed or lack time to make.
+You need to give up on crazy time consuming ideas when you already have gone way past concept phase.
